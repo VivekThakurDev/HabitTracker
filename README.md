@@ -65,6 +65,12 @@ npm run dev
 ```
 *Client runs on `http://localhost:5173` (or 5174)*
 
+### 3. Deployment (Production)
+The project is configured for easy deployment.
+-   **Build**: `npm run build` (builds client to `client/dist`)
+-   **Start**: `npm start` (starts server serving static files)
+-   **Root Install**: `npm run install-all` (installs all dependencies)
+
 ## 📡 API Endpoints
 
 | Method | Endpoint | Description |
