@@ -1,0 +1,26 @@
+Habit Tracker Project Structure
+===============================
+
+Root Directory: /
+├── client/                 # Frontend (React + Vite)
+│   ├── public/             # Static assets
+│   ├── src/                # Source code
+│   │   ├── components/     # React Components
+│   │   │   ├── AddHabit.jsx   # Form to add new habits
+│   │   │   ├── Dashboard.jsx  # Charts and stats (Recharts)
+│   │   │   └── HabitList.jsx  # List of habits with Edit/Delete/Log actions
+│   │   ├── App.jsx         # Main application component & routing
+│   │   ├── main.jsx        # Entry point
+│   │   └── index.css       # Global styles (Dark theme, Animations)
+│   ├── index.html          # HTML template
+│   ├── package.json        # Frontend dependencies
+│   └── vite.config.js      # Vite configuration
+│
+├── server/                 # Backend (Node.js + Express)
+│   ├── server.js           # API Endpoints (GET, POST, PUT, DELETE)
+│   ├── excelHandler.js     # Logic for reading/writing Excel file
+│   ├── habits.xlsx         # Database (Excel file storing habits & logs)
+│   └── package.json        # Backend dependencies
+│
+├── requirements.txt        # List of dependencies
+└── project_structure.txt   # This file
