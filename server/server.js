@@ -75,6 +75,15 @@ app.post('/api/log', (req, res) => {
     }
 });
 
+// Serve static files from the React client
+const path = require('path');
+app.use(express.static(path.join(__dirname, '../client/dist')));
+
+// Catch-all route to serve the React app for any unknown routes
+app.get(/.*/, (req, res) => {
+    res.sendFile('index.html', { root: path.join(__dirname, '../client/dist') });
+});
+
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
